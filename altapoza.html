@@ -1,0 +1,80 @@
+<html lang="ro"></html>
+
+
+<doby>
+    <link rel="stylesheet" href="STYLEWEEDING.css">
+   <center>
+      <div id="container">
+         <img class="slide" src="https://images.pexels.com/photos/1023233/pexels-photo-1023233.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+         <!-- Add more images as needed -->
+         <h1>Au mai ramas : </h1>
+         <p id="countdown"></p>
+     
+         <script>
+             // Setează data evenimentului (de exemplu, nunta ta)
+             var countDownDate = new Date("Sept 6, 2025 19:00:00").getTime();
+     
+             // Actualizează countdown-ul la fiecare secundă
+             var x = setInterval(function() {
+                 
+                 // Obține data și ora curentă
+                 var now = new Date().getTime();
+                 
+                 // Calculul diferenței dintre data evenimentului și data curentă
+                 var distance = countDownDate - now;
+                 
+                 // Calculul zilelor, orelor, minutelor și secundelor
+                 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                 
+                 // Afișează rezultatul în elementul cu id-ul "countdown"
+                 document.getElementById("countdown").innerHTML = days + " zile " + hours + " ore " + minutes + " minute " + seconds + " secunde";
+                 
+                 // Dacă countdown-ul a ajuns la 0, afișează un mesaj
+                 if (distance < 0) {
+                     clearInterval(x);
+                     document.getElementById("countdown").innerHTML = "Evenimentul a avut loc!";
+                 }
+             }, 1000);
+         </script>
+         <h1 class="title"><span>Wedding</span> Invitation</h1>
+         <h2>Cristian & Denisa</h2>
+         <div id="details">
+            <h3>Detalii importante</h3>
+            <p>Date: 6 Septembrie, 2025</p>
+            <p>Biserica Mihail Kogalniceanu: 4:30 PM</p>
+            <p>Restaurant Noblesse : 7:00 PM</p>
+            
+         </div>
+
+         <div id="footer">
+            <p>Speram sa va avem alaturi de noi ! </p>
+            <style>
+                .btn {
+                    padding: 10px 20px;
+                    background-color: #e68b52;
+                    color: white;
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    display: inline-block;
+                    font-size: 16px;
+                }
+        
+                .btn:hover {
+                    background-color: #45a049;
+                }
+            </style>
+        </head>
+        <body>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrr8zhIAYSZwr0hRBuJ1_JdLi_vutD-BBit07Z2W7Swmme2g/viewform?usp=header" class="btn">Apasa aici </a>
+         </div>
+      </div>
+      <script src="java.js"></script>
+      
+    
+   </center>
+   </body>
+   </html>
